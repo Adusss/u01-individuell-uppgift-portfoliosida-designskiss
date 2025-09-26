@@ -3,13 +3,17 @@
   padding: 0;
 }
 
+:root {
+  --font: "DM Sans", sans-serif;
+}
+
 html,
 body {
   height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--font);
 }
 main {
   flex: 1;
@@ -32,10 +36,20 @@ main {
 }
 
 .nav-main-left-img {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.icon-hamburger {
+  display: none;
+  height: 25px;
+  width: 25px;
 }
 
 .main-nav-links {
-  width: 609px;
+  max-width: 609px;
+  width: 100%;
   height: 26px;
   display: flex;
   justify-content: space-between;
@@ -45,11 +59,11 @@ main {
 .main-nav-links a {
   color: rgb(105, 105, 105);
   text-decoration: none;
-  font-family: "DM Sans", sans-serif;
   font-weight: 500;
   font-size: 18px;
 }
 .nav-main-right-img {
+  gap: 20px;
   margin-right: 20px;
   width: 130px;
   height: 32px;
@@ -88,7 +102,6 @@ main {
   flex-direction: column;
   justify-content: end;
   font-size: 39px;
-  font-family: "DM Sans", sans-serif;
 }
 
 .main-section-right {
@@ -104,7 +117,7 @@ main {
 }
 
 /* main */
-/* asdas */
+
 /* footer */
 .main-footer {
   background-color: white;
@@ -114,4 +127,64 @@ main {
   font-family: "DM Sans", sans-serif;
 }
 
+.footer-content {
+  gap: 10px;
+}
+
 /* footer */
+
+@media (max-width: 900px) {
+  .main-section {
+    flex-direction: column;
+    height: 500px;
+    padding: 0 20px 0 20px;
+    margin-bottom: 0;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    margin: 0;
+    height: auto;
+  }
+
+  .nav-main-left-img {
+    display: flex;
+    align-self: flex-start;
+    padding: 20px 20px 0 20px;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  .main-nav-links {
+    flex-direction: column;
+    height: 200px;
+    max-width: none;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .nav-main-right-img {
+    margin-right: 0;
+    margin-top: 10px;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .footer-content {
+    display: none;
+  }
+
+  .main-section-left {
+    font-size: 25px;
+    padding-bottom: 20px;
+  }
+
+  .main-section-image {
+    height: 300px;
+    width: 300px;
+  }
+
+  .icon-hamburger {
+    display: block;
+  }
+}

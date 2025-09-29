@@ -1,23 +1,21 @@
-* {
-  margin: 0;
-  padding: 0;
+body {
+  font-family: var(--font);
+}
+
+.main-about {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 150px;
 }
 
 :root {
+  --colorgray: #a7a7a7;
+  --colordarkblue: #42446e;
+  --colordark: #666666;
   --font: "DM Sans", sans-serif;
 }
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  font-family: var(--font);
-}
-main {
-  flex: 1;
-}
 /* nav  */
 .main-header {
   text-align: center;
@@ -39,6 +37,9 @@ main {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+.nav-logo {
+  width: 100px;
 }
 
 .icon-hamburger {
@@ -76,54 +77,133 @@ main {
   height: 29.26px;
 }
 
+#my-links {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#my-links.show {
+  display: flex;
+}
+
+#my-links a {
+  color: rgb(105, 105, 105);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.icon-hamburger {
+  cursor: pointer;
+}
+
 /* nav */
 
-/* main */
-
-.main-hero-section {
-  display: flex;
-  justify-content: center;
+.content-main {
+  width: 1193px;
 }
 
-.main-section {
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  width: 1204px;
-  height: 350px;
-  margin-top: 200px;
-  margin-bottom: 200px;
+.content-holder {
+  max-width: 708px;
 }
-
-.main-section-left {
-  background-color: white;
-  font-weight: 700;
+.about {
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  font-size: 39px;
+  justify-content: flex-start;
 }
 
-.gradient-name {
-  background: linear-gradient(90deg, #13b0f5, #e70faa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.about p {
+  font-size: 18px;
+  color: var(--colordark);
+  line-height: 26px;
 }
 
-.main-section-right {
+.education-top,
+.experience-company,
+.experience-date,
+.experience-down-holder,
+.experience-role-top,
+.education-down {
+  display: flex;
+  justify-content: space-between;
 }
 
-.main-section-image {
-  border: 8px solid transparent;
-  background: linear-gradient(#151515, #151515) padding-box, linear-gradient(to top, #e70faa, #00c0fd) border-box;
-  width: 349px;
-  height: 349px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-top: 30px;
+.experience-company-left,
+.experience-date-right,
+.education-company,
+.education-date,
+.experience-date-right,
+.experience-company-down-left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-/* main */
+.experience-company-left {
+  margin-right: 15px;
+}
+
+.icon-carbon,
+.icon-location,
+.icon-office {
+  height: 21px;
+  width: 16px;
+}
+
+.experience-item,
+.education-item {
+  border-bottom: rgba(128, 128, 128, 0.479) solid 1px;
+}
+
+.h1-content-main {
+  font-size: 42px;
+  color: var(--colordarkblue);
+  font-weight: 900;
+  padding: 30px 0 10px;
+  line-height: 52px;
+  letter-spacing: -0.4px;
+  margin: 0;
+}
+
+.p-content-main {
+  font-size: 20px;
+  margin: 0;
+  color: var(--colordark);
+  align-items: center;
+  display: flex;
+}
+.p-content-down {
+  color: var(--colorgray);
+  font-size: 12px;
+  margin: 0;
+}
+
+.experience-down-holder,
+.education-down {
+  padding: 0 0 25px 0;
+}
+
+.experience-role-top {
+  padding: 25px 0 0 0;
+}
+
+.experience-top-right {
+  background-color: #d7ffe0;
+  color: #018c0f;
+  height: 24px;
+  width: 84px;
+  box-sizing: border-box;
+  border-radius: 40px;
+  font-size: 9px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
 
 /* footer */
 .main-footer {
@@ -136,6 +216,7 @@ main {
 
 .footer-content {
   gap: 10px;
+  color: #a7a7a7;
 }
 
 .footer-gradient {
@@ -183,10 +264,6 @@ main {
     width: 100%;
   }
 
-  .footer-content {
-    display: none;
-  }
-
   .main-section-left {
     font-size: 25px;
     padding-bottom: 20px;
@@ -205,7 +282,19 @@ main {
     display: none;
   }
 
-  .nav-icon {
+  .content-holder {
+    padding: 20px;
+  }
+  .nav-main-right-img {
+    display: none;
+  }
+
+  .br {
+    display: none;
+  }
+
+  .main-about {
+    margin-bottom: 0;
   }
 }
 @media (min-width: 900px) {
@@ -216,25 +305,4 @@ main {
   .show {
     display: none !important;
   }
-}
-
-#my-links {
-  display: none;
-  flex-direction: column;
-  gap: 10px;
-}
-
-#my-links.show {
-  display: flex;
-}
-
-#my-links a {
-  color: rgb(105, 105, 105);
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 18px;
-}
-
-.icon-hamburger {
-  cursor: pointer;
 }

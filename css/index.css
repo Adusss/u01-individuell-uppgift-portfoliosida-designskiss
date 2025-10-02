@@ -25,7 +25,7 @@ main {
   justify-content: center;
 }
 
-.main-nav {
+.nav-main {
   background-color: white;
   display: flex;
   align-items: center;
@@ -50,7 +50,7 @@ main {
   width: 25px;
 }
 
-.main-nav-links {
+.nav-main-links {
   max-width: 609px;
   width: 100%;
   height: 26px;
@@ -59,7 +59,7 @@ main {
   margin-left: auto;
   margin-right: 50px;
 }
-.main-nav-links a {
+.nav-main-links a {
   color: rgb(105, 105, 105);
   text-decoration: none;
   font-weight: 500;
@@ -103,12 +103,12 @@ main {
 
 /* main */
 
-.main-hero-section {
+.section-main-holder {
   display: flex;
   justify-content: center;
 }
 
-.main-section {
+.section-main {
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -118,7 +118,7 @@ main {
   margin-bottom: 200px;
 }
 
-.main-section-left {
+.section-main-left {
   background-color: white;
   font-weight: 700;
   display: flex;
@@ -133,10 +133,7 @@ main {
   -webkit-text-fill-color: transparent;
 }
 
-.main-section-right {
-}
-
-.main-section-image {
+.section-main-image {
   border: 8px solid transparent;
   background: linear-gradient(#151515, #151515) padding-box, linear-gradient(to top, #e70faa, #00c0fd) border-box;
   width: 349px;
@@ -149,7 +146,7 @@ main {
 /* main */
 
 /* footer */
-.main-footer {
+.footer-main {
   background-color: white;
   display: flex;
   justify-content: center;
@@ -171,14 +168,14 @@ main {
 /* footer */
 
 @media (max-width: 900px) {
-  .main-section {
+  .section-main {
     flex-direction: column;
     height: 500px;
     padding: 0 20px 0 20px;
     margin-bottom: 0;
   }
 
-  .main-nav {
+  .nav-main {
     flex-direction: column;
     margin: 0;
     height: auto;
@@ -192,7 +189,7 @@ main {
     align-items: center;
   }
 
-  .main-nav-links {
+  .nav-main-links {
     flex-direction: column;
     height: 200px;
     max-width: none;
@@ -211,12 +208,12 @@ main {
     display: none;
   }
 
-  .main-section-left {
+  .section-main-left {
     font-size: 25px;
     padding-bottom: 20px;
   }
 
-  .main-section-image {
+  .section-main-image {
     height: 300px;
     width: 300px;
   }
@@ -225,7 +222,7 @@ main {
     display: block;
   }
 
-  .main-nav-links {
+  .nav-main-links {
     display: none;
   }
 }

@@ -98,8 +98,62 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 900px) {
+  .main-nav {
+    flex-direction: column;
+    margin: 0;
+    height: auto;
+  }
+
+  .nav-main-left-img {
+    display: flex;
+    align-self: flex-start;
+    padding: 20px 20px 0 20px;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  .main-nav-links {
+    flex-direction: column;
+    height: 200px;
+    max-width: none;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .nav-main-right-img {
+    margin-right: 0;
+    margin-top: 10px;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .icon-hamburger {
+    display: block;
+  }
+
+  .main-nav-links {
+    display: none;
+  }
+
+  .nav-main-right-img {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .icon-hamburger {
+    display: none;
+  }
+
+  .show {
+    display: none !important;
+  }
+}
+
 /* nav */
 
+/* main  */
 .content-main {
   width: 1193px;
 }
@@ -205,6 +259,22 @@ body {
   margin-bottom: 10px;
 }
 
+@media (max-width: 900px) {
+  .content-holder {
+    padding: 20px;
+  }
+
+  .br {
+    display: none;
+  }
+
+  .main-about {
+    margin-bottom: 0;
+  }
+}
+
+/* main */
+
 /* footer */
 .footer-main {
   background-color: white;
@@ -228,43 +298,14 @@ body {
 /* footer */
 
 @media (max-width: 900px) {
-  .main-section {
+  /* .main-section {
     flex-direction: column;
     height: 500px;
     padding: 0 20px 0 20px;
     margin-bottom: 0;
-  }
+  } */
 
-  .main-nav {
-    flex-direction: column;
-    margin: 0;
-    height: auto;
-  }
-
-  .nav-main-left-img {
-    display: flex;
-    align-self: flex-start;
-    padding: 20px 20px 0 20px;
-    box-sizing: border-box;
-    align-items: center;
-  }
-
-  .main-nav-links {
-    flex-direction: column;
-    height: 200px;
-    max-width: none;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
-  .nav-main-right-img {
-    margin-right: 0;
-    margin-top: 10px;
-    max-width: 300px;
-    width: 100%;
-  }
-
-  .main-section-left {
+  /* .main-section-left {
     font-size: 25px;
     padding-bottom: 20px;
   }
@@ -272,37 +313,5 @@ body {
   .main-section-image {
     height: 300px;
     width: 300px;
-  }
-
-  .icon-hamburger {
-    display: block;
-  }
-
-  .main-nav-links {
-    display: none;
-  }
-
-  .content-holder {
-    padding: 20px;
-  }
-  .nav-main-right-img {
-    display: none;
-  }
-
-  .br {
-    display: none;
-  }
-
-  .main-about {
-    margin-bottom: 0;
-  }
-}
-@media (min-width: 900px) {
-  .icon-hamburger {
-    display: none;
-  }
-
-  .show {
-    display: none !important;
-  }
+  } */
 }

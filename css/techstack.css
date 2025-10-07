@@ -5,6 +5,9 @@
 
 :root {
   --font: "DM Sans", sans-serif;
+  --backgroundcolor: white;
+  --gradient-main: linear-gradient(90deg, #13b0f5, #e70faa);
+  --fontcolor: #666666;
 }
 
 html,
@@ -29,7 +32,7 @@ main {
 }
 
 .nav-main {
-  background-color: white;
+  background-color: var(--backgroundcolor);
   display: flex;
   align-items: center;
   width: 1193px;
@@ -63,7 +66,7 @@ main {
   margin-right: 50px;
 }
 .nav-main-links a {
-  color: rgb(105, 105, 105);
+  color: var(--fontcolor);
   text-decoration: none;
   font-weight: 500;
   font-size: 18px;
@@ -93,7 +96,7 @@ main {
 }
 
 #my-links a {
-  color: rgb(105, 105, 105);
+  color: var(--fontcolor);
   text-decoration: none;
   font-weight: 700;
   font-size: 18px;
@@ -225,7 +228,7 @@ main {
 
 /* footer */
 .footer-main {
-  background-color: white;
+  background-color: var(--backgroundcolor);
   display: flex;
   justify-content: center;
   padding: 50px;
@@ -238,7 +241,7 @@ main {
 }
 
 .footer-gradient {
-  background: linear-gradient(90deg, #13b0f5, #e70faa);
+  background: var(--gradient-main);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

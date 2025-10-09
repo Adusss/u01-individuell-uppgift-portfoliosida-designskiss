@@ -156,9 +156,16 @@ main {
 
 /* main */
 
+main {
+  display: flex;
+  justify-content: center;
+}
+
 .section-main-holder {
   display: flex;
   justify-content: center;
+  max-width: 1193px;
+  width: 100%;
 }
 
 .section-main {
@@ -200,7 +207,7 @@ main {
   .section-main {
     flex-direction: column;
     height: 500px;
-    padding: 0 20px 0 20px;
+    padding: 0 23.5px 0 23.5px;
     margin-bottom: 0;
   }
 
@@ -238,7 +245,7 @@ main {
 }
 
 @media (max-width: 900px) {
-  .footer-content {
+  .footer-main {
     display: none;
   }
 }

@@ -3,21 +3,17 @@
   padding: 0;
 }
 
+body {
+  font-family: var(--font);
+}
+
 :root {
+  --colorgray: #a7a7a7;
+  --colordarkblue: #42446e;
+  --colordark: #666666;
   --font: "DM Sans", sans-serif;
   --backgroundcolor: white;
   --gradient-main: linear-gradient(90deg, #13b0f5, #e70faa);
-  --fontcolor: #666666;
-  --colordarkblue: #42446e;
-}
-
-html,
-body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  font-family: var(--font);
 }
 
 /* nav  */
@@ -25,10 +21,9 @@ body {
   text-align: center;
   display: flex;
   justify-content: center;
-  margin-bottom: 100px;
 }
 
-.nav-main {
+.main-nav {
   background-color: var(--backgroundcolor);
   display: flex;
   align-items: center;
@@ -53,7 +48,7 @@ body {
   width: 25px;
 }
 
-.nav-main-links {
+.main-nav-links {
   max-width: 609px;
   width: 100%;
   height: 26px;
@@ -62,8 +57,8 @@ body {
   margin-left: auto;
   margin-right: 50px;
 }
-.nav-main-links a {
-  color: var(--fontcolor);
+.main-nav-links a {
+  color: var(--font);
   text-decoration: none;
   font-weight: 500;
   font-size: 18px;
@@ -93,7 +88,7 @@ body {
 }
 
 #my-links a {
-  color: var(--fontcolor);
+  color: var(--font);
   text-decoration: none;
   font-weight: 700;
   font-size: 18px;
@@ -104,7 +99,7 @@ body {
 }
 
 @media (max-width: 900px) {
-  .nav-main {
+  .main-nav {
     flex-direction: column;
     margin: 0;
     height: auto;
@@ -118,7 +113,7 @@ body {
     align-items: center;
   }
 
-  .nav-main-links {
+  .main-nav-links {
     flex-direction: column;
     height: 200px;
     max-width: none;
@@ -127,14 +122,21 @@ body {
   }
 
   .nav-main-right-img {
-    display: none;
+    margin-right: 0;
+    margin-top: 10px;
+    max-width: 300px;
+    width: 100%;
   }
 
   .icon-hamburger {
     display: block;
   }
 
-  .nav-main-links {
+  .main-nav-links {
+    display: none;
+  }
+
+  .nav-main-right-img {
     display: none;
   }
 }
@@ -148,112 +150,44 @@ body {
     display: none !important;
   }
 }
-/* nav */
 
+/* nav */
 /* main */
 
-main {
+.main {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 800px;
 }
 
-.projects-main {
-  max-width: 532px;
-  box-sizing: border-box;
-  margin: 0 20px 0 20px;
-}
-.projects-title-main {
-  font-size: 40px;
-  color: var(--colordarkblue);
-}
-.projects-title-under {
-  margin: 10px 0 60px 0;
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.parent {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-.projects {
-  border-radius: 29px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.199);
-}
-
-.project-title,
-.project-text,
-.project-text-tech,
-.project-down-links {
-  padding: 16px;
-}
-
-.project-text-tech {
-  font-weight: 500;
-}
-.project-title {
-  font-size: 20px;
-}
-.project-text {
-  color: var(--fontcolor);
-}
-
-.project-down-links {
-  display: flex;
-  justify-content: space-between;
-}
-
-.projects-live-left,
-.projects-code-right {
+.contact {
   display: flex;
   align-items: center;
-  text-align: center;
-  gap: 5px;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 35px;
+  margin-bottom: 300px;
 }
 
-.projects-code-right a,
-.projects-live-left a {
-  color: inherit;
+.contact-p {
+  font-size: 35px;
+}
+.contact-title,
+.contact-p {
+  color: var(--colordarkblue);
+  font-size: clamp(1rem, 5vw, 3rem);
 }
 
-.projects-img-box {
+.contact-gradient,
+.contact-nummer {
+  font-size: clamp(1rem, 5vw, 3rem);
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.projects-img {
-  object-fit: cover;
-  width: 100%;
-}
-
-@media (min-width: 900px) {
-  .projects {
-    max-width: 373px;
-  }
-
-  .parent {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 50px;
-  }
-
-  .projects-main {
-    max-width: 1300px;
-    margin: 0;
-  }
-}
-
-@media (max-width: 900px) {
-  .projects-title-under {
-    display: none;
-  }
-
-  .projects-title-main {
-    margin-bottom: 50px;
-  }
-}
-/* main */
+/* main  */
 /* footer */
 .footer-main {
   background-color: var(--backgroundcolor);

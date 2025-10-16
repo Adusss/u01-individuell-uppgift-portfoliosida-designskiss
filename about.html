@@ -12,13 +12,13 @@
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-nav">
+      <nav class="nav-main">
         <div class="nav-main-left-img">
-          <img src="/images/pavanmg.png" alt="icon" width="100px" />
-          <img class="icon-hamburger" src="/images/hamburger.png" alt="icon" onclick="toggleMenu()" />
+          <img class="nav-logo-img" src="/images/pavanmg.png" alt="logo" />
+          <img class="icon-hamburger" src="/images/icons/hamburger.png" alt="hamburger" onclick="toggleMenu()" />
         </div>
 
-        <div class="main-nav-links">
+        <div class="nav-main-links">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="techstack.html">Tech Stack</a>
@@ -31,11 +31,24 @@
           <a href="techstack.html">Tech Stack</a>
           <a href="projects.html">Projects</a>
           <a href="contact.html">Contact</a>
+
+          <button class="nav-dark-mode" onclick="myFunction()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+              <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+            </svg>
+          </button>
         </div>
         <div class="nav-main-right-img">
-          <img class="nav-icon" src="images/github.png" alt="github" />
-          <img class="nav-icon" src="images/twitter.png" alt="twitter" />
-          <img class="nav-icon" src="images/in.png" alt="linkedin" />
+          <img class="nav-icon" src="images/icons/github.png" alt="github" />
+          <img class="nav-icon" src="images/icons/twitter.png" alt="twitter" />
+          <img class="nav-icon" src="images/icons/in.png" alt="linkedin" />
+        </div>
+        <div class="nav-dark-mode-btn">
+          <button class="nav-dark-mode" onclick="myFunction()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+              <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+            </svg>
+          </button>
         </div>
       </nav>
     </header>
@@ -53,7 +66,7 @@
           </div>
 
           <section class="experience">
-            <h1 class="h1-content-main">Work Experience</h1>
+            <h2 class="h1-content-main">Work Experience</h2>
             <div class="experience-item">
               <div class="experience-role-top">
                 <p class="p-content-main">Junior Web Developer</p>
@@ -62,16 +75,16 @@
               <div class="experience-down-holder">
                 <div class="experience-company-down-left">
                   <div class="experience-company-left">
-                    <img class="icon-office" src="images/mdi_office-building.svg" alt="Company" />
+                    <img class="icon-office" src="images/icons/mdi_office-building.svg" alt="Company" />
                     <p class="p-content-down">Dr. Rajkumar’s Learning App</p>
                   </div>
                   <div class="experience-company-left">
-                    <img class="icon-location" src="images/carbon_location.svg" alt="Location" />
+                    <img class="icon-location" src="images/icons/carbon_location.svg" alt="Location" />
                     <p class="p-content-down">Bengaluru</p>
                   </div>
                 </div>
                 <div class="experience-date-right">
-                  <img class="icon-carbon" src="images/gg_calendar-dates.svg" alt="Date" />
+                  <img class="icon-carbon" src="images/icons/gg_calendar-dates.svg" alt="Date" />
                   <p class="p-content-down">Sep 2021 - Dec 2021</p>
                 </div>
               </div>
@@ -85,16 +98,16 @@
               <div class="experience-down-holder">
                 <div class="experience-company-down-left">
                   <div class="experience-company-left">
-                    <img class="icon-office" src="images/mdi_office-building.svg" alt="Company" />
+                    <img class="icon-office" src="images/icons/mdi_office-building.svg" alt="Company" />
                     <p class="p-content-down">IonPixelz Web Solutions</p>
                   </div>
                   <div class="experience-company-left">
-                    <img class="icon-location" src="images/carbon_location.svg" alt="Location" />
+                    <img class="icon-location" src="images/icons/carbon_location.svg" alt="Location" />
                     <p class="p-content-down">Bengaluru</p>
                   </div>
                 </div>
                 <div class="experience-date-right">
-                  <img class="icon-carbon" src="images/gg_calendar-dates.svg" alt="Date" />
+                  <img class="icon-carbon" src="images/icons/gg_calendar-dates.svg" alt="Date" />
                   <p class="p-content-down">Sep 2021 - Dec 2021</p>
                 </div>
               </div>
@@ -108,16 +121,16 @@
               <div class="experience-down-holder">
                 <div class="experience-company-down-left">
                   <div class="experience-company-left">
-                    <img class="icon-office" src="images/mdi_office-building.svg" alt="Company" />
+                    <img class="icon-office" src="images/icons/mdi_office-building.svg" alt="Company" />
                     <p class="p-content-down">HAAPS</p>
                   </div>
                   <div class="experience-company-left">
-                    <img class="icon-location" src="images/carbon_location.svg" alt="Location" />
+                    <img class="icon-location" src="images/icons/carbon_location.svg" alt="Location" />
                     <p class="p-content-down">Bengaluru</p>
                   </div>
                 </div>
                 <div class="experience-date-right">
-                  <img class="icon-carbon" src="images/gg_calendar-dates.svg" alt="Date" />
+                  <img class="icon-carbon" src="images/icons/gg_calendar-dates.svg" alt="Date" />
                   <p class="p-content-down">Sep 2021 - Dec 2021</p>
                 </div>
               </div>
@@ -125,7 +138,7 @@
           </section>
 
           <section class="education">
-            <h1 class="h1-content-main">Education</h1>
+            <h3 class="h1-content-main">Education</h3>
             <div class="education-item">
               <div class="education-top">
                 <p class="p-content-main">Bachelor in Electronics & Communication</p>
@@ -133,11 +146,11 @@
               </div>
               <div class="education-down">
                 <div class="education-company">
-                  <img class="icon-office" src="images/mdi_office-building.svg" alt="School" />
+                  <img class="icon-office" src="images/icons/mdi_office-building.svg" alt="School" />
                   <p class="p-content-down">Bangalore Institute of Technology</p>
                 </div>
                 <div class="education-date">
-                  <img class="icon-carbon" src="images/gg_calendar-dates.svg" alt="Date" />
+                  <img class="icon-carbon" src="images/icons/gg_calendar-dates.svg" alt="Date" />
                   <p class="p-content-down">Aug 2015 - Dec 2020</p>
                 </div>
               </div>

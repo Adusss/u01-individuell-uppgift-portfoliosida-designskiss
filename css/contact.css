@@ -10,12 +10,15 @@ body {
 :root {
   --colorgray: #a7a7a7;
   --colordarkblue: #42446e;
-  --colordark: #666666;
+  --fontcolor: #666666;
   --font: "DM Sans", sans-serif;
-  --backgroundcolor: white;
   --gradient-main: linear-gradient(90deg, #13b0f5, #e70faa);
 }
 
+.dark-mode {
+  background-color: #191919;
+  color: white;
+}
 /* nav  */
 .main-header {
   text-align: center;
@@ -24,7 +27,6 @@ body {
 }
 
 .main-nav {
-  background-color: var(--backgroundcolor);
   display: flex;
   align-items: center;
   width: 1193px;
@@ -39,6 +41,10 @@ body {
   width: 100%;
 }
 .nav-logo {
+  width: 100px;
+}
+
+.nav-logo-img {
   width: 100px;
 }
 
@@ -58,7 +64,7 @@ body {
   margin-right: 50px;
 }
 .main-nav-links a {
-  color: var(--font);
+  color: var(--fontcolor);
   text-decoration: none;
   font-weight: 500;
   font-size: 18px;
@@ -88,7 +94,6 @@ body {
 }
 
 #my-links a {
-  color: var(--font);
   text-decoration: none;
   font-weight: 700;
   font-size: 18px;
@@ -96,6 +101,30 @@ body {
 
 .icon-hamburger {
   cursor: pointer;
+}
+
+.nav-dark-mode-btn {
+  display: flex;
+}
+
+.nav-dark-mode {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.nav-icon-moon {
+  height: 22.26px;
+}
+
+.nav-dark-mode svg {
+  color: black;
+  width: 20px;
+  height: 20px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .nav-dark-mode svg {
+  color: white;
 }
 
 @media (max-width: 900px) {
@@ -137,6 +166,10 @@ body {
   }
 
   .nav-main-right-img {
+    display: none;
+  }
+
+  .nav-dark-mode-btn {
     display: none;
   }
 }
@@ -190,7 +223,6 @@ body {
 /* main  */
 /* footer */
 .footer-main {
-  background-color: var(--backgroundcolor);
   display: flex;
   justify-content: center;
   padding: 50px;

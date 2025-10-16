@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: var(--font);
 }
@@ -12,12 +17,15 @@ body {
 :root {
   --colorgray: #a7a7a7;
   --colordarkblue: #42446e;
-  --colordark: #666666;
+  --fontcolor: #666666;
   --font: "DM Sans", sans-serif;
-  --backgroundcolor: white;
   --gradient-main: linear-gradient(90deg, #13b0f5, #e70faa);
 }
 
+.dark-mode {
+  background-color: #191919;
+  color: white;
+}
 /* nav  */
 .main-header {
   text-align: center;
@@ -25,8 +33,7 @@ body {
   justify-content: center;
 }
 
-.main-nav {
-  background-color: var(--backgroundcolor);
+.nav-main {
   display: flex;
   align-items: center;
   width: 1193px;
@@ -44,13 +51,17 @@ body {
   width: 100px;
 }
 
+.nav-logo-img {
+  width: 100px;
+}
+
 .icon-hamburger {
   display: none;
   height: 25px;
   width: 25px;
 }
 
-.main-nav-links {
+.nav-main-links {
   max-width: 609px;
   width: 100%;
   height: 26px;
@@ -59,8 +70,8 @@ body {
   margin-left: auto;
   margin-right: 50px;
 }
-.main-nav-links a {
-  color: var(--font);
+.nav-main-links a {
+  color: var(--fontcolor);
   text-decoration: none;
   font-weight: 500;
   font-size: 18px;
@@ -100,8 +111,41 @@ body {
   cursor: pointer;
 }
 
+.nav-dark-mode {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.nav-icon-moon {
+  height: 22.26px;
+}
+
+.nav-dark-mode-btn {
+  display: flex;
+}
+
+.nav-dark-mode {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.nav-icon-moon {
+  height: 22.26px;
+}
+
+.nav-dark-mode svg {
+  color: black;
+  width: 20px;
+  height: 20px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .nav-dark-mode svg {
+  color: white;
+}
+
 @media (max-width: 900px) {
-  .main-nav {
+  .nav-main {
     flex-direction: column;
     margin: 0;
     height: auto;
@@ -115,7 +159,7 @@ body {
     align-items: center;
   }
 
-  .main-nav-links {
+  .nav-main-links {
     flex-direction: column;
     height: 200px;
     max-width: none;
@@ -134,11 +178,15 @@ body {
     display: block;
   }
 
-  .main-nav-links {
+  .nav-main-links {
     display: none;
   }
 
   .nav-main-right-img {
+    display: none;
+  }
+
+  .nav-dark-mode-btn {
     display: none;
   }
 }
@@ -279,7 +327,6 @@ body {
 
 /* footer */
 .footer-main {
-  background-color: var(--backgroundcolor);
   display: flex;
   justify-content: center;
   padding: 50px;

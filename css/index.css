@@ -5,7 +5,6 @@
 
 :root {
   --font: "DM Sans", sans-serif;
-  --backgroundcolor: white;
   --gradient-main: linear-gradient(90deg, #13b0f5, #e70faa);
   --fontcolor: rgb(105, 105, 105);
 }
@@ -18,9 +17,12 @@ body {
   flex-direction: column;
   font-family: var(--font);
 }
-main {
-  flex: 1;
+
+.dark-mode {
+  background-color: #191919;
+  color: white;
 }
+
 /* nav  */
 .main-header {
   text-align: center;
@@ -29,7 +31,6 @@ main {
 }
 
 .nav-main {
-  background-color: var(--backgroundcolor);
   display: flex;
   align-items: center;
   width: 1193px;
@@ -103,6 +104,30 @@ main {
   cursor: pointer;
 }
 
+.nav-dark-mode-btn {
+  display: flex;
+}
+
+.nav-dark-mode {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.nav-icon-moon {
+  height: 22.26px;
+}
+
+.nav-dark-mode svg {
+  color: black;
+  width: 20px;
+  height: 20px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .nav-dark-mode svg {
+  color: white;
+}
+
 @media (max-width: 900px) {
   .nav-main {
     flex-direction: column;
@@ -141,6 +166,10 @@ main {
     display: none;
   }
 
+  .nav-dark-mode-btn {
+    display: none;
+  }
+
   @media (min-width: 900px) {
     .icon-hamburger {
       display: none;
@@ -169,7 +198,6 @@ main {
 }
 
 .section-main {
-  background-color: var(--backgroundcolor);
   display: flex;
   justify-content: space-between;
   width: 1204px;
@@ -179,7 +207,6 @@ main {
 }
 
 .section-main-left {
-  background-color: var(--backgroundcolor);
   font-weight: 700;
   display: flex;
   flex-direction: column;
@@ -226,7 +253,6 @@ main {
 
 /* footer */
 .footer-main {
-  background-color: var(--backgroundcolor);
   display: flex;
   justify-content: center;
   padding: 50px;

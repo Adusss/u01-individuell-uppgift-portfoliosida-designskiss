@@ -3,4 +3,4 @@ Information om denna uppgift [finns på Canvas](https://chasacademy.instructure.
 
 # Mitt projekt
 
-Live demo: [Se sidan här](https://68f0e66ef3af832cc7157ccc--adrian-01-uppgift.netlify.app)
+Live demo: [Se sidan här](https://68f0eb07a23d610008292672--adrian-01-uppgift.netlify.app)
